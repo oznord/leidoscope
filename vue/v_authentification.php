@@ -5,7 +5,7 @@
 
 <form class="auth-form" action="index.php?uc=authentification&action=authentification" method="post">
     <h1 class="auth-titre">Authentification</h1>
-    <label for="login">Login</label>
+    <label for="login">Email</label>
     <input type="email" id="login" name="login" required autocomplete="username"
         pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         title="Saisissez une adresse mail valide.">

@@ -79,11 +79,18 @@ button:hover::after {
     align-items: center;
     border: 2px solid green;
     border-radius: 25%;
+    transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
 .auth-form h1
 {
     border-bottom: 2px solid green;
+}
+
+.auth-form:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.3);
 }
 
 .auth-form label
