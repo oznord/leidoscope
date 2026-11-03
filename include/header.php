@@ -5,7 +5,7 @@
 
     <title>LEIDOSCOPE</title>
 
-    <link href="includes/css/style.css" rel="stylesheet">
+    <link href="include/css/style.css" rel="stylesheet">
     
 </head>
 <body>

@@ -1,6 +1,99 @@
+/* global */
+
 body
 {
-    background-color: #0F172A;
+    background-color: ghostwhite;
     font-family: Calibri;
+}
+
+input
+{
+    border: 2px solid green;
+    font-size: 20px;
+    padding: 0.5rem;
+}
+
+button
+{
+    background-color: green;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
     color: white;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+button::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: left 0.6s ease;
+}
+
+button:hover
+{
+    background-color: green;
+    box-shadow: 0 0 20px limegreen;
+    transform: translateY(-2px);
+    transition: 500ms;
+}
+
+button:hover::after {
+  left: 140%;
+}
+
+/* authentification */
+
+.auth-div
+{
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.auth-logo
+{
+    width: 10%;
+}
+
+.auth-form
+{
+    width: 20%;
+    background-color: white;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    gap: 2rem;
+    align-items: center;
+    border: 2px solid green;
+    border-radius: 25%;
+}
+
+.auth-form h1
+{
+    border-bottom: 2px solid green;
+}
+
+.auth-form label
+{
+    font-size: 24px;
+}
+
+/* accueil */
+
+.accueil-contexte
+{
+    text-align: center;
 }
