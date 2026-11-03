@@ -1,7 +1,7 @@
 <?php
 
 $host = '127.0.0.1';
-$db_name = 'nom_de_la_db';
+$db_name = 'leidoscope';
 $username = 'root';
 $password = '';
 
