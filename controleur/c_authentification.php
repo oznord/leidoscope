@@ -18,7 +18,7 @@ switch ($action)
         }
 
     case 'afficher' : {
-            include("vues/v_authentification.php") ;
+            include("vue/v_authentification.php") ;
             break ;
         }
 }
