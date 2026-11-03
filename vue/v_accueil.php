@@ -1,5 +1,15 @@
 <div class="accueil-contexte">
 
+<?php
+    if(!isset($_SESSION['login']))
+        echo '<form action="index.php?uc=authentification" method = "POST" align="right">
+
+        <input type="text" name="login" placeholder="Login" required>
+        <input type="password" name="mdp" placeholder="Mot de passe" required>
+        <input type="submit" value="OK">
+
+        </form>';
+?>
     <h1>Bienvenue au centre hospitalier LEIDOSCOPE</h1>
 
     <h2>est un établissement privé de santé ayant les missions suivantes :</h2>
