@@ -13,27 +13,20 @@ if (!isset($_REQUEST['uc']))
 }
 else
 {
-    if ($_REQUEST['uc']=='decnx') {
+    if ($_REQUEST['uc']=='deconnexion') {
         session_destroy();
         header("Location:index.php");
     } else {
 
         include "include/modele/connexion.php" ;
         include "include/modele/gestion_bdd.php" ;
-        
-        $action = $_REQUEST['action'] ?? '';
-        if (in_array($action, ['connexion'])) {
 
-            include "controleur/c_principal.php";
-        } else {
-
-            echo '<title>LEIDOSCOPE</title>';
-            include "include/header.php" ; 
-            include "controleur/c_principal.php" ; 
-            include "include/footer.php" ;
-            if (ob_get_level()) {
-                ob_end_flush();
-            }
+        echo '<title>LEIDOSCOPE</title>';
+        include "include/header.php" ;
+        include "controleur/c_principal.php" ;
+        include "include/footer.php" ;
+        if (ob_get_level()) {
+            ob_end_flush();
         }
     }
 }

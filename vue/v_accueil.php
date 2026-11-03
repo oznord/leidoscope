@@ -2,10 +2,14 @@
 
 <?php
     if(!isset($_SESSION['login']))
-        echo '<form action="index.php?uc=authentification" method = "POST" align="right">
+        echo '<form action="index.php?uc=authentification&action=authentification" method = "POST" align="right">
 
-        <input type="text" name="login" placeholder="Login" required>
-        <input type="password" name="mdp" placeholder="Mot de passe" required>
+        <input type="email" name="login" placeholder="Adresse mail" required
+               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+               title="Saisissez une adresse mail valide.">
+        <input type="password" name="mdp" placeholder="Mot de passe" required
+               pattern="(?=.*[^A-Za-z0-9\s])(?=.{12,}$).*"
+               title="Le mot de passe doit contenir au moins 12 caractères et au moins un caractère spécial.">
         <input type="submit" value="OK">
 
         </form>';
