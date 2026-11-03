@@ -1,6 +1,6 @@
 <?php
 if (!isset($_REQUEST['uc'])) {
-    $uc = "accueil" ;
+    $uc = "authentification" ;
 }
 else {
     $uc = $_REQUEST['uc'] ;
