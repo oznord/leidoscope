@@ -7,8 +7,7 @@ date_default_timezone_set('Europe/Paris');
 if (!isset($_REQUEST['uc']))
 {
     echo '<title>LEIDOSCOPE</title>';
-    include "vue/v_authentification.php" ;
-    
+    include "controleur/c_principal.php";
 }
 else
 {
@@ -23,7 +22,7 @@ else
         $action = $_REQUEST['action'] ?? '';
         if (in_array($action, ['connexion'])) {
 
-            include "controleur/c_principal.php/?uc=authentification";
+            include "controleur/c_principal.php";
         } else {
 
             echo '<title>LEIDOSCOPE</title>';
