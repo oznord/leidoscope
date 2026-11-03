@@ -7,7 +7,7 @@ else
 switch ($action)
 {
 	case "afficher" : { 
-            require "vues/v_vehiculev_accueil.php" ; 
+            require "vue/v_vehiculev_accueil.php" ; 
             break ;             
         }
         
