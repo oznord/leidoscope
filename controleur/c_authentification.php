@@ -1,6 +1,6 @@
 <?php
 if (!isset($_REQUEST['action'])) 
-    $action = "authentification" ;
+    $action = "afficher" ;
 else 
     $action = $_REQUEST['action'] ;
 
@@ -14,6 +14,11 @@ switch ($action)
 
             header("Location: index.php?uc=accueil");
 
+            break ;
+        }
+
+    case 'afficher' : {
+            include("vues/v_authentification.php") ;
             break ;
         }
 }
