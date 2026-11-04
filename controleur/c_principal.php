@@ -11,6 +11,7 @@ switch ($uc)
     case 'authentification' : { include "c_authentification.php"; break; }
     case 'deconnexion' : {  include "c_deconnexion.php" ; break ; } 
     case 'accueil' : { include "c_accueil.php" ; break ; }
+    case 'catalogue' : { include "c_catalogue.php" ; break ; }
 }
 
 ?>

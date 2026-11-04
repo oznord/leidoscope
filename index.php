@@ -7,7 +7,7 @@ date_default_timezone_set('Europe/Paris');
 if (!isset($_REQUEST['uc']))
 {
     echo '<title>LEIDOSCOPE</title>';
-    include "include/header.php";
+    include "include/header_de_base.php";
     include "controleur/c_principal.php";
     include "include/footer.php" ;
 }

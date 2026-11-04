@@ -12,14 +12,16 @@
 
 <nav>
 <div class='nav-gauche'>
-    <li class='nav-marque'>
-        <img class='nav-logo' src="/include/img/logo.png" alt="logo" />
-        <span class='nav-titre'>Leidoscope</span>
+    <li>
+        <a class='nav-marque' href="/index.php?uc=accueil">
+            <img class='nav-logo' src="/include/img/logo.png" alt="logo" />
+            <span class='nav-titre'>Leidoscope</span>
+        </a>
     </li>
+    <li><a href="/index.php?uc=catalogue"><span>Catalogue</span></a></li>
 </div>
 <div class='nav-droite'>
-    <li><span>Formations</span></li>
-    <li><span>Ateliers</span></li>
+    <li><a href="/index.php?uc=deconnexion"><span>Se déconnecter</span></a></li>
 </div>
 </nav>
 

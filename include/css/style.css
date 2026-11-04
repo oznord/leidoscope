@@ -85,7 +85,7 @@ nav
 
 .nav-marque:hover
 {
-    background-color: green;
+    background-color: limegreen;
 }
 
 .nav-logo
@@ -106,16 +106,19 @@ nav
     flex-direction: row;
 }
 
-li
+li a
 {
+    display: flex;
+    align-items: center;
     padding: 1.5rem;
+    text-decoration: none;
     font-size: 30px;
     color: white;
     transition: 500ms;
     cursor: pointer;
 }
 
-li:hover
+li a:hover
 {
     background-color: seagreen;
     transition: 500ms;
@@ -172,7 +175,7 @@ li:hover
 
 .accueil-contexte
 {
-    margin-top: 15rem;
+    margin-top: 10rem;
     text-align: center;
 }
 
@@ -186,7 +189,7 @@ li:hover
 
 .accueil-carte
 {
-    width: 13%;
+    width: 15%;
     background-color: white;
     display: flex;
     justify-self: center;
@@ -198,7 +201,7 @@ li:hover
     gap: 1.4rem;
     align-items: center;
     border: 2px solid green;
-    border-radius: 15%;
+    border-radius: 10%;
     transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
@@ -211,4 +214,271 @@ li:hover
 .accueil-carte img
 {
     width: 40%;
+}
+
+/* catalogue des formations */
+
+.catalogue
+{
+    width: min(1120px, calc(100% - 2rem));
+    margin: 2rem auto 4rem;
+}
+
+.catalogue-entete
+{
+    max-width: 720px;
+    margin-bottom: 2rem;
+}
+
+.catalogue-sur-titre
+{
+    margin-bottom: 0.5rem;
+    color: #38783b;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.catalogue-entete h1
+{
+    margin: 0;
+    color: #193b25;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.catalogue-entete p:last-child
+{
+    color: #506052;
+    font-size: 1.1rem;
+}
+
+.catalogue-filtres
+{
+    display: grid;
+    grid-template-columns: minmax(220px, 2fr) minmax(180px, 1fr) minmax(160px, 1fr) auto;
+    gap: 1rem;
+    align-items: end;
+    padding: 1.25rem;
+    background: white;
+    border: 1px solid #d5e2d5;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(25, 59, 37, 0.08);
+}
+
+.catalogue-champ
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.catalogue-champ label
+{
+    color: #294a32;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.catalogue-champ input,
+.catalogue-champ select
+{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #b8cdbb;
+    border-radius: 0.5rem;
+    background: #fbfdfb;
+    font-size: 1rem;
+}
+
+.catalogue-bouton
+{
+    min-height: 46px;
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: #28743a;
+    font-size: 1rem;
+}
+
+.catalogue-reset
+{
+    grid-column: 1 / -1;
+    justify-self: start;
+    color: #38783b;
+    font-size: 0.9rem;
+}
+
+.catalogue-resultats
+{
+    margin: 1.5rem 0 1rem;
+    color: #5b6b5d;
+}
+
+.catalogue-cartes
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.formation-carte
+{
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    padding: 1.4rem;
+    background: white;
+    border: 1px solid #d9e5da;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(25, 59, 37, 0.07);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.formation-carte:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(25, 59, 37, 0.14);
+}
+
+.formation-carte-haut
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.formation-categorie,
+.formation-complet
+{
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+
+.formation-categorie
+{
+    color: #276436;
+    background: #e7f2e8;
+}
+
+.formation-complet
+{
+    color: #8a3c32;
+    background: #f9e8e5;
+}
+
+.formation-carte h2
+{
+    margin: 1.2rem 0;
+    color: #193b25;
+    font-size: 1.3rem;
+    line-height: 1.25;
+}
+
+.formation-informations
+{
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+}
+
+.formation-informations div
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid #edf2ed;
+    padding-bottom: 0.55rem;
+}
+
+.formation-informations dt
+{
+    color: #657568;
+    font-size: 0.85rem;
+}
+
+.formation-informations dd
+{
+    margin: 0;
+    color: #294a32;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.formation-places{
+    margin: auto 0 0;
+    padding-top: 1.2rem;
+    color: #28743a;
+    font-weight: bold;
+}
+
+.formation-places span
+{
+    float: right;
+    color: #78877b;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.formation-places-complet
+{
+    color: #a04438;
+}
+
+.catalogue-vide
+{
+    padding: 3rem 1rem;
+    background: white;
+    border: 1px solid #d9e5da;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 900px)
+{
+    .catalogue-filtres
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .catalogue-recherche
+    {
+        grid-column: 1 / -1;
+    }
+
+    .catalogue-bouton
+    {
+        width: 100%;
+    }
+
+    .catalogue-cartes
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px)
+{
+    .catalogue
+    {
+        width: min(100% - 1.25rem, 480px);
+        margin-top: 1rem;
+    }
+
+    .catalogue-filtres,
+    .catalogue-cartes
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogue-recherche,
+    .catalogue-reset
+    {
+        grid-column: auto;
+    }
 }
