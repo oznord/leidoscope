@@ -18,7 +18,6 @@ function verifierIdentification($loginSaisi, $mdpSaisi) {
     if ($exec->rowCount() > 0) {
         $trouve = true ;
         $_SESSION['login']=$ligne['login'] ;
-        $_SESSION['mdp']=$ligne['mdp'] ;
     }
 
     return $trouve ;
