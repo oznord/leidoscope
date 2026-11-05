@@ -5,7 +5,7 @@
 
     <title>LEIDOSCOPE</title>
 
-    <link href="include/css/style.css" rel="stylesheet">
+    <link href="include/css/style.css?v=2" rel="stylesheet">
     
 </head>
 <body>
@@ -32,4 +32,3 @@
         echo ' ';
     }
     ?>
-</body>
