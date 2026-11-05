@@ -8,19 +8,21 @@
 */
 function verifierIdentification($loginSaisi, $mdpSaisi) {
     require "connexion.php" ;
-    $sql="select login, mdp from utilisateur
+    $sql="select id, login, mdp, role from utilisateur
           where login = ? and mdp = ?" ;
     $exec=$bdd->prepare($sql);
-    $data= [strtoupper($loginSaisi), MD5($mdpSaisi)];
-    $trouve = false ;
-    $exec->execute($data) ;
+    $data = [trim($loginSaisi), md5($mdpSaisi)];
+    $exec->execute($data);
     $ligne=$exec->fetch();
-    if ($exec->rowCount() > 0) {
-        $trouve = true ;
-        $_SESSION['login']=$ligne['login'] ;
+
+    if ($ligne !== false) {
+        $_SESSION['utilisateur_id'] = (int) $ligne['id'];
+        $_SESSION['login'] = $ligne['login'];
+        $_SESSION['role'] = $ligne['role'];
+        return true;
     }
 
-    return $trouve ;
+    return false;
 }
 
 /**

@@ -7,8 +7,8 @@ else
 switch ($action)
 {
     case 'authentification' : {  
-            $login = $_POST['login'] ;
-            $mdp = $_POST['mdp'] ;
+        $login = trim($_POST['login'] ?? '');
+        $mdp = $_POST['mdp'] ?? '';
             
             $emailValide = preg_match('/^[^@\s]+@[^@\s]+\.[^@\s]+$/', $login);
             $motDePasseValide = preg_match('/^(?=.*[^A-Za-z0-9\s]).{12,}$/', $mdp);
