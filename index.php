@@ -7,7 +7,7 @@ date_default_timezone_set('Europe/Paris');
 if (!isset($_REQUEST['uc']))
 {
     echo '<title>LEIDOSCOPE</title>';
-    include "include/header_de_base.php";
+    include "include/header_sans_connexion.php";
     include "controleur/c_principal.php";
     include "include/footer.php" ;
 }
@@ -33,7 +33,7 @@ else
         include "include/modele/gestion_bdd.php" ;
 
         echo '<title>LEIDOSCOPE</title>';
-        include "include/header_de_base.php" ;
+        include "include/header_sans_connexion.php" ;
         include "controleur/c_principal.php" ;
         include "include/footer.php" ;
         if (ob_get_level()) {
@@ -44,12 +44,37 @@ else
         include "include/modele/connexion.php" ;
         include "include/modele/gestion_bdd.php" ;
 
-        echo '<title>LEIDOSCOPE</title>';
-        include "include/header.php" ;
-        include "controleur/c_principal.php" ;
-        include "include/footer.php" ;
-        if (ob_get_level()) {
-            ob_end_flush();
+        $role = verifierRole($_SESSION['login']);
+
+        if ($role == "administrateur")
+        {
+            echo '<title>LEIDOSCOPE</title>';
+            include "include/header_admin.php" ;
+            include "controleur/c_principal.php" ;
+            include "include/footer.php" ;
+            if (ob_get_level()) {
+                ob_end_flush();
+            }   
+        }
+        else if ($role == "gestionnaire")
+        {
+            echo '<title>LEIDOSCOPE</title>';
+            include "include/header_gestion.php" ;
+            include "controleur/c_principal.php" ;
+            include "include/footer.php" ;
+            if (ob_get_level()) {
+                ob_end_flush();
+            }   
+        }
+        else
+        {
+            echo '<title>LEIDOSCOPE</title>';
+            include "include/header_salarie.php" ;
+            include "controleur/c_principal.php" ;
+            include "include/footer.php" ;
+            if (ob_get_level()) {
+                ob_end_flush();
+            }   
         }
     }
 }

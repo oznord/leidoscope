@@ -24,6 +24,24 @@ function verifierIdentification($loginSaisi, $mdpSaisi) {
 }
 
 /**
+ * Vérifie le rôle de l'utilisateur
+ 
+ * @param $loginSaisi
+ * @return un boolÃ©en true si utilisateur connu, false sinon 
+*/
+function verifierRole($loginSaisi) {
+    require "connexion.php" ;
+    $sql="select role from utilisateur
+          where login = ?" ;
+    $exec=$bdd->prepare($sql);
+    $data= [strtoupper($loginSaisi)];
+    $exec->execute($data) ;
+    $ligne=$exec->fetch();
+
+    return $ligne['role'];
+}
+
+/**
  * Récupère les formations selon les filtres du catalogue.
  *
  * @return array<int, array<string, mixed>>
@@ -79,6 +97,23 @@ function recupererCategoriesFormations() {
          FROM formation f
          INNER JOIN categorie c ON c.id = f.id_categorie
          ORDER BY c.libelle ASC"
+    );
+
+    return $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+
+/**
+ * Récupère les utilisateurs présents dans la base de données.
+ *
+ * @return array<int, array<string, mixed>>
+ */
+function recupererUtilisateurs() {
+    global $bdd;
+
+    $requete = $bdd->query(
+        "SELECT *
+         FROM utilisateur
+         ORDER BY role DESC"
     );
 
     return $requete->fetchAll(PDO::FETCH_ASSOC);
