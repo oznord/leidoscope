@@ -14,6 +14,8 @@ switch ($uc)
     case 'catalogue' : { include "c_catalogue.php" ; break ; }
     case 'gestion_compte' : { include "c_gestion_compte.php" ; break ; }
     case 'formation' : { include "c_formation.php"; break ; }
+    case 'planning' : { include "c_planning.php"; break ; }
+
 }
 
 ?>

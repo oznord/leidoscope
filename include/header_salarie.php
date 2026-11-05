@@ -19,6 +19,7 @@
         </a>
     </li>
     <li><a href="index.php?uc=catalogue"><span>Catalogue</span></a></li>
+    <li><a href="index.php?uc=planning"><span>Planning</span></a></li>
 </div>
 <div class='nav-droite'>
     <li><a href="index.php?uc=deconnexion"><span>Se déconnecter</span></a></li>
