@@ -7,7 +7,7 @@
     <div class="accueil-ligne">
 
         <div class="accueil-carte">
-            <img src="/include/img/coeur.png" alt="coeur">
+            <img src="include/img/coeur.png" alt="coeur">
             <div>
                 <p>Une mission de soins :</p>
                 <p>examens, diagnostics, traitements et aide médicale urgente.</p>
@@ -15,7 +15,7 @@
         </div>
         
         <div class="accueil-carte">
-            <img src="/include/img/cle.png" alt="cle">
+            <img src="include/img/cle.png" alt="cle">
             <div>
                 <p>une mission d’hébergement :</p>
                 <p>une capacité de 900 lits pour des personnes âgées dépendantes.</p>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="accueil-carte">
-            <img src="/include/img/chapeau.png" alt="chapeau">
+            <img src="include/img/chapeau.png" alt="chapeau">
             <div>
                 <p>Une mission d'enseignement et de formation :</p>
                 <p>école d’aides-soignants et stagiaires de formations diverses au sein de nos services.</p>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="accueil-carte">
-            <img src="/include/img/cigarette.png" alt="cigarette">
+            <img src="include/img/cigarette.png" alt="cigarette">
             <div>
                 <p>Une mission de prévention et d'éducation pour la santé :</p>
                 <p>tabagisme, l’alcoolisme, la toxicomanie et les pathologies cardiovasculaires notamment.</p>
