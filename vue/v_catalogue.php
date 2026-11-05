@@ -74,7 +74,11 @@ function horaireCatalogue($horaire)
                             <span class="formation-complet">Complet</span>
                         <?php endif; ?>
                     </div>
-                    <h2><?= securiserCatalogue($formation['intitule']) ?></h2>
+                    <h2>
+                        <a href="index.php?uc=formation&id=<?= (int) $formation['id'] ?>">
+                            <?= securiserCatalogue($formation['intitule']) ?>
+                        </a>
+                    </h2>
                     <dl class="formation-informations">
                         <div>
                             <dt>Date</dt>
@@ -93,6 +97,9 @@ function horaireCatalogue($horaire)
                         <?= $placesRestantes ?> place<?= $placesRestantes > 1 ? 's' : '' ?> restante<?= $placesRestantes > 1 ? 's' : '' ?>
                         <span><?= $formation['inscrits'] ?>/<?= $formation['places'] ?> inscrits</span>
                     </p>
+                    <a class="formation-detail-lien" href="index.php?uc=formation&id=<?= (int) $formation['id'] ?>">
+                        Voir le détail
+                    </a>
                 </article>
             <?php endforeach; ?>
         </section>

@@ -16,6 +16,7 @@ input
 
 button
 {
+    position: relative;
     background-color: green;
     overflow: hidden;
     border: 2px solid white;
@@ -164,6 +165,32 @@ li a:hover
 .auth-form label
 {
     font-size: 24px;
+}
+
+.auth-form input
+{
+    box-sizing: border-box;
+    width: min(100%, 280px);
+    border: 1px solid #b8cdbb;
+    border-radius: 0.5rem;
+    background: #fbfdfb;
+}
+
+.auth-form button
+{
+    position: relative;
+    overflow: hidden;
+    padding: 0.8rem 1.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.auth-form p
+{
+    margin: 0;
+    color: #a04438;
+    font-size: 0.9rem;
 }
 
 /* accueil */
@@ -374,6 +401,18 @@ li a:hover
     line-height: 1.25;
 }
 
+.formation-carte h2 a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.formation-carte h2 a:hover
+{
+    color: #28743a;
+    text-decoration: underline;
+}
+
 .formation-informations
 {
     display: grid;
@@ -425,6 +464,27 @@ li a:hover
     color: #a04438;
 }
 
+.formation-detail-lien
+{
+    align-self: flex-start;
+    margin-top: 1rem;
+    padding: 0.45rem 0.7rem;
+    color: #28743a;
+    border: 1px solid #b8cdbb;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 350ms;
+}
+
+.formation-detail-lien:hover
+{
+    color: white;
+    background: #28743a;
+    border-color: #28743a;
+}
+
 .catalogue-vide
 {
     padding: 3rem 1rem;
@@ -432,6 +492,129 @@ li a:hover
     border: 1px solid #d9e5da;
     border-radius: 1rem;
     text-align: center;
+}
+
+/* fiche détail d'une formation */
+
+.formation-detail
+{
+    width: min(860px, calc(100% - 2rem));
+    margin: 3rem auto 4rem;
+    padding: 2.5rem;
+    background: white;
+    border: 1px solid #d9e5da;
+    border-radius: 1.2rem;
+    box-shadow: 0 10px 28px rgba(25, 59, 37, 0.1);
+}
+
+.formation-detail > p:first-child
+{
+    display: inline-block;
+    margin: 0 0 0.8rem;
+    padding: 0.4rem 0.75rem;
+    color: #276436;
+    background: #e7f2e8;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.formation-detail h1
+{
+    margin: 0 0 1rem;
+    color: #193b25;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+}
+
+.formation-detail > p
+{
+    color: #506052;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.formation-detail dl
+{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.25rem;
+    background: #f5faf5;
+    border: 1px solid #e1ece1;
+    border-radius: 0.8rem;
+}
+
+.formation-detail dt
+{
+    margin-bottom: 0.25rem;
+    color: #657568;
+    font-size: 0.85rem;
+}
+
+.formation-detail dd
+{
+    margin: 0;
+    color: #294a32;
+    font-weight: bold;
+}
+
+.formation-detail form
+{
+    margin-top: 1.5rem;
+}
+
+.formation-detail button
+{
+    position: relative;
+    overflow: hidden;
+    padding: 0.85rem 1.25rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: #28743a;
+    font-size: 1rem;
+}
+
+.formation-detail button:disabled
+{
+    background: #9aa89d;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.formation-detail button:disabled::after
+{
+    display: none;
+}
+
+.formation-detail a
+{
+    color: #28743a;
+    font-weight: bold;
+}
+
+.formation-detail a:hover
+{
+    color: #193b25;
+}
+
+.formation-detail
+{
+    width: min(100% - 1.25rem, 480px);
+    margin-top: 1rem;
+    padding: 1.25rem;
+}
+
+.formation-detail dl
+{
+    grid-template-columns: 1fr;
+}
+
+.formation-detail button
+{
+    width: 100%;
 }
 
 @media (max-width: 900px)
@@ -454,6 +637,12 @@ li a:hover
     .catalogue-cartes
     {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    li a
+    {
+        padding: 1rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -501,4 +690,5 @@ li a:hover
     width: 50%;
     padding: 0.6rem;
     font-size: 18px;
+
 }
