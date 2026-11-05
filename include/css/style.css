@@ -463,6 +463,27 @@ li a:hover
     color: #a04438;
 }
 
+.formation-detail-lien
+{
+    align-self: flex-start;
+    margin-top: 1rem;
+    padding: 0.45rem 0.7rem;
+    color: #28743a;
+    border: 1px solid #b8cdbb;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 350ms;
+}
+
+.formation-detail-lien:hover
+{
+    color: white;
+    background: #28743a;
+    border-color: #28743a;
+}
+
 .catalogue-vide
 {
     padding: 3rem 1rem;

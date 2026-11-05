@@ -97,6 +97,9 @@ function horaireCatalogue($horaire)
                         <?= $placesRestantes ?> place<?= $placesRestantes > 1 ? 's' : '' ?> restante<?= $placesRestantes > 1 ? 's' : '' ?>
                         <span><?= $formation['inscrits'] ?>/<?= $formation['places'] ?> inscrits</span>
                     </p>
+                    <a class="formation-detail-lien" href="index.php?uc=formation&id=<?= (int) $formation['id'] ?>">
+                        Voir le détail
+                    </a>
                 </article>
             <?php endforeach; ?>
         </section>
