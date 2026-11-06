@@ -671,10 +671,45 @@ li a:hover
 
 .gestion-compte-ajouter-button
 {
-    width: 20%;
-    padding: 0.6rem;
-    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    background-color: green;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 24px;
+    color: white;
+    transition: 500ms;
+    cursor: pointer;
+    position: relative;
 }
+
+.gestion-compte-ajouter-button::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: left 0.6s ease;
+}
+
+.gestion-compte-ajouter-button:hover
+{
+    background-color: green;
+    box-shadow: 0 0 20px limegreen;
+    transform: translateY(-2px);
+    transition: 500ms;
+}
+
+.gestion-compte-ajouter-button:hover::after {
+  left: 140%;
+}
+
 
 .gestion-compte-boutons
 {

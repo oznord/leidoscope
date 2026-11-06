@@ -1,4 +1,9 @@
 <?php
+if ($role != "administrateur")
+{
+    header("Location: index.php?uc=accueil");
+}
+
 function securiserCompte($valeur)
 {
     return htmlspecialchars($valeur, ENT_QUOTES, 'UTF-8');
@@ -6,7 +11,9 @@ function securiserCompte($valeur)
 ?>
 
 <main class="catalogue">
-    <button class="gestion-compte-ajouter-button">Ajouter un compte</button>
+    <div class="gestion-compte-button">
+    <a href="index.php?uc=gestion_compte&action=ajouter_compte" class="gestion-compte-ajouter-button">Ajouter un compte</a>
+    </div>
     <h1>Liste des comptes :</h1>
     <section class="catalogue-cartes">
         <?php foreach ($utilisateurs as $util) : ?>
